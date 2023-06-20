@@ -19,50 +19,50 @@ class Nav extends React.Component{
     }
 
 
-    render(){
-        return(
-            <div className={styles.nav}>
-                <div className={styles.links}>
-                    <NavLink to="/home" onClick={this.handleHome}>
-                        <img className={styles.logoHome} src="../../public/logoL.png" alt=""/>
-                    </NavLink> 
-                </div>
-                <div className={styles.links}>
-                    <NavLink to="/newActivity" className={styles.link}>
-                        Agregar Actividad
-                    </NavLink>
-                </div>       
-                <div className={styles.links}>
-                <div className={styles.filtros}>
-                    <label htmlFor="order">Ordenar por: &nbsp; </label>
-                    <select id="order"  onChange={handleOrder} defaultValue='B'>
-                        <option value="B" disabled hidden></option>
-                        <option value="x">Ninguno</option>
-                        <option value="A">Ascendente</option>
-                        <option value="D">Descendente</option>
-                    </select>
-                                        
-                    <label htmlFor="filter">&nbsp; Filtrar por: &nbsp;</label>
-                    <select id="filter"  onChange={handleFilter} defaultValue='B'>
-                        <option value="B" disable hidden></option>
-                        <option value="x">Ninguno</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Genderless">Genderless</option>
-                        <option value="unknown">unknown</option>
-                    </select> 
-                </div>
-                </div>    
-
-             
-                
-                                
-                <SearchBar onSearch={this.props.onSearch} />    
+    render() {
+        return (
+          <div className={styles.nav}>
+            <div className={styles.links}>
+              <NavLink to="/home" onClick={this.handleHome}>
+                <img className={styles.logoHome} src="../../public/logoL.png" alt="" />
+              </NavLink>
+              <NavLink to="/newActivity" className={styles.link}>
+                Agregar Actividad
+              </NavLink>
+            </div>
       
-            </div>            
-        )
+            <div className={styles.filtros}>
+              <label htmlFor="order"></label>
+              <select id="order" onChange={this.handleOrder} defaultValue='B'>
+                <option value="B" disabled hidden>Ordenar</option>
+                <option value="x">Ninguno</option>
+                <option value="A">Ascendente</option>
+                <option value="D">Descendente</option>
+              </select>
+      
+              <select id="filter" onChange={this.handleFilter} defaultValue='B'>
+                <option value="B" disabled hidden>Continente</option>
+                <option value="x">Ninguno</option>
+                <option value="America">America</option>
+                <option value="Asia">Asia</option>
+                <option value="Africa">Africa</option>
+                <option value="Antartida">Antartida</option>
+                <option value="Europa">Europa</option>
+                <option value="Oceania">Oceania</option>
+              </select>
+              <select id="filter" onChange={this.handleFilter} defaultValue='B'>
+                <option value="B" disabled hidden>Actividad</option>
+                <option value="x">Ninguno</option>
+                <option value="America">Con Actividades</option>
+                <option value="Asia">Sin Actividades</option>
 
-    }
+              </select>
+            </div>
+      
+            <SearchBar onSearch={this.props.onSearch} />
+          </div>
+        );
+      }
 }
 
 const mapDispatchToProps=(dispatch)=>{
@@ -71,3 +71,5 @@ const mapDispatchToProps=(dispatch)=>{
     }
   }
 export default connect(null,mapDispatchToProps)(Nav);
+
+
