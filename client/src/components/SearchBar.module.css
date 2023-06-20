@@ -1,0 +1,58 @@
+.search{
+    
+    height: 90%;
+    display: flex;   
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size:small;
+    text-align:right;
+    background-color: rgba(99, 24, 170, 0.945);
+    padding: 0.3%;
+    margin: 0.5%;
+    border-radius: 10px;
+    width: 20%;
+    float: right;
+    margin-left: auto;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+.search input {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    width: 0%;
+    padding: 1%;
+    margin: 2%;
+    margin-left: 7%;
+    flex-grow: 1;
+
+}
+.search button {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    text-align: center;
+    flex-wrap: wrap;
+    height: 100%;
+    font-size: 110%;
+    color: rgb(185, 242, 250);
+    padding: 0.7%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 2%;
+    margin-left: 1.7%;
+    margin-right: 2.7%;
+    border-radius: 7px;
+    text-decoration: none;
+    background-color: rgba(74, 10, 133, 0.945);
+    border-style: solid;
+    border-color:rgba(74, 10, 133, 0.945);
+}
+.search button:hover{
+    background-color: rgba(115, 47, 179, 0);
+    border-color:rgba(153, 70, 231, 0.842);
+}
+.search form{
+    display: flex; 
+    flex-wrap: wrap;
+    flex-grow: 1; 
+}

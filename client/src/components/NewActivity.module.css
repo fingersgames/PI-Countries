@@ -1,0 +1,90 @@
+.form {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 50%;
+    font-size: small;
+    background-color: rgba(74, 10, 133, 0.705);
+    padding: 1.5%;
+    border-radius: 10px;
+    width: 50%;
+    margin: 4%;
+    padding: 3%;
+    margin-top: 8em;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .itemForm {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .itemForm label {
+    justify-self: start;
+    margin-right: 10px;
+    white-space: nowrap;
+  }
+  .itemForm input {
+    flex: 1;
+  }
+
+.form img{
+    margin-top: -7%;
+    width: 90%;
+}
+.form .formBtn{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    align-self: auto;
+    margin: auto;
+    
+    margin-top: 4%;
+    background-color: rgb(97, 193, 248);
+    border-radius: 4px;
+    padding: 4%;
+    width: 60%;
+    font-size: large;
+    border-style: solid;
+    border-color: blueviolet;
+    
+}
+.form button:disabled{
+    background-color: rgb(39, 72, 73);
+    color: rgb(5, 20, 32);
+
+}
+.form p{
+    font-size: large;
+    width: 90%;
+    color: red;
+    min-height: 18px;
+
+
+}
+.form button:hover{
+    background-color: rgba(115, 47, 179, 0);
+    border-color:rgba(153, 70, 231, 0.842);
+}
+.form input{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    margin: auto;   
+    margin-top: 1%;
+    width: 100%;
+    font-size: medium;
+    padding: 2%;
+    padding-left: 0%;
+    padding-right: 0%;
+    
+}
+.form label{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    width: 40%;
+    font-size: large;
+    padding: 0%;
+
+}

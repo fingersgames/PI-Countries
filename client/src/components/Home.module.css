@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 255, 255, 0.582);
+    padding: 3%;
+    border-radius: 10px;
+    margin: 2%;
+    margin-top: 7em;
+    width: 90%;
+}
+.country{
+    display: flex;
+    justify-content: center;
+    color: brown;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+p {
+    color: rgb(2, 28, 68);
+}

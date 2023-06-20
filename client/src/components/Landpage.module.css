@@ -1,0 +1,63 @@
+
+.form {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(74, 10, 133, 0.705);
+    padding: 3%;
+    border-radius: 10px;
+    width: 30%;
+    align-items: center;
+    justify-content: center; /* Alinea verticalmente los elementos en el centro */
+    margin: 4%;
+    box-sizing: border-box;
+}
+form {
+    width: 80%;
+    text-align: center;
+}
+.form button {
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 10%;
+    background-color: rgba(108, 171, 243, 0.733);
+    border-radius: 4px;
+    padding: 3%;
+    font-size:1vw;
+    border-style: solid;
+    border-color: rgb(213, 232, 248);
+    text-align: center;
+    padding-left: 7%;
+    padding-right: 7%;
+    box-sizing: border-box; 
+    overflow: hidden;
+    display: block; 
+    margin: 10% auto;
+}
+.form img{
+    margin-top: -7%;
+    width: 80%;
+}
+
+.tittleContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4%;
+    border: 2px solid rgb(248, 255, 255);
+    background-color: rgb(209, 226, 248);
+    border-radius: 5px;
+    padding: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  
+  .tittle {
+    color:rgb(25, 25, 126);
+    font-size: 2vw;
+  }
+.form button:hover{
+    background-color: rgba(115, 47, 179, 0.548);
+    border-color:rgba(197, 199, 226, 0.842);
+}
+

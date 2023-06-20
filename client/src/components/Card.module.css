@@ -1,0 +1,31 @@
+.card{
+    font-size:small;
+    text-align: center;
+    background-color: rgba(137, 43, 226, 0.842);
+    padding: 5px;
+    margin: 15px;
+    border-radius: 10px;
+    width: 190px;
+    border-style: solid;
+    border-color: blueviolet;
+}
+.card:hover{
+    background-color:rgba(17, 136, 248, 0.418);
+    border-color:rgba(128, 24, 226, 0.945);
+}
+.card img{
+    border-radius: 5%;
+    width: 90%;
+}
+
+.cardTitle {
+    font-size: 150%;
+    color: rgb(12, 1, 51);
+
+}
+.card h2 {
+    font-size: 140%;
+    color:rgb(200, 202, 248);
+    font-weight: 100;
+}
+

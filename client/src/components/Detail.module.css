@@ -1,0 +1,47 @@
+.Detail {
+
+    text-align: center;
+    background-color: rgba(0, 255, 255, 0.582);
+    padding: 1%;
+    margin: 15px;
+    border-radius: 10px;
+    width: 30%;
+    margin-top: 7em ;
+
+    border-color:rgba(128, 24, 226, 0.945);
+    border-style: solid;
+
+}
+.Detail p {
+    font-size: 100%;
+    color:rgb(18, 21, 65);
+    margin: 4%;
+}
+.Detail img{
+    border-radius: 10px;
+    width: 95%;
+}
+.cardTitle{
+    font-size: 200%;
+    color: rgb(12, 1, 51);
+    margin-bottom: 3%;
+    margin-top: 9%;
+
+}
+.boton{
+    color: rgb(185, 242, 250);
+    background-color: rgba(74, 10, 133, 0.945);
+    border-style: solid;
+    border-color:rgba(74, 10, 133, 0.945);
+    float: right;
+    border-radius: 20%;
+    font-size: 120%;
+    padding: 1%;
+    width: 8%;
+    font-size: small;
+
+}
+.boton:hover{
+    background-color: rgba(115, 47, 179, 0.945);
+    border-color:rgba(153, 70, 231, 0.507);
+}
