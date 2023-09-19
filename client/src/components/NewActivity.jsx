@@ -1,16 +1,19 @@
 import styles from "./NewActivity.module.css"
-import {useEffect, useState } from "react" 
+import {useState } from "react" 
 import validation from "./validation.js"
 import axios from 'axios';
+import { useDispatch } from "react-redux";
+import { addCountries} from "../redux/actions";
+import { useNavigate} from 'react-router-dom'
 const NewActivity =()=>{
- 
+    const dispatch=useDispatch();
+    const navigate=useNavigate()
     const [actividadCreada,setActividadCreada]=useState('')
     const [errors,setErrors]=useState(
         {
             name: "",
             duration: 0,
             countries:[]
-           
         }
     )  
  
@@ -30,7 +33,9 @@ const NewActivity =()=>{
         axios.post(`${URL_BASE}/activities`, activity)
         .then(response => {
             console.log(response.data)
-        setActividadCreada(response.data)
+            setActividadCreada(response.data)
+            dispatch(addCountries())
+
         })
         .catch(error => {
             console.log(error.response.data)
@@ -57,6 +62,9 @@ const NewActivity =()=>{
         )
         setErrors(validation({...activity,[event.target.name]:event.target.value}))
 
+    }
+    const handleCancel=()=>{
+        navigate('/home')
     }
 
 
@@ -102,10 +110,11 @@ const NewActivity =()=>{
 
                 <div className={styles.itemForm}>       
                     <label htmlFor="">Paises: </label>
-                    <input  type="text" placeholder='Codigo de pais separado por coma...' name="countries" value={activity.countries} onChange={handleChange} />
+                    <input  type="text" placeholder='Codigos de paises separado por coma...' name="countries" value={activity.countries} onChange={handleChange} />
                     {errors.countries.length !== 0? <span>{errors.countries}</span>: null}       
                 </div>
                 <button disabled ={errors.name || errors.duration|| errors.countries.length !== 0}  className={styles.formBtn} type="submit">Crear actividad</button>
+                <button className={styles.formBtn} type="button" onClick={()=>handleCancel()}>Cancelar</button>
                 
             </form>
             :

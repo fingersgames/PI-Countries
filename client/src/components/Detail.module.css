@@ -5,8 +5,8 @@
     padding: 1%;
     margin: 15px;
     border-radius: 10px;
-    width: 30%;
-    margin-top: 7em ;
+    width: 17em;
+    margin-top: 6em ;
 
     border-color:rgba(128, 24, 226, 0.945);
     border-style: solid;
@@ -19,7 +19,7 @@
 }
 .Detail img{
     border-radius: 10px;
-    width: 95%;
+    width: 90%;
 }
 .cardTitle{
     font-size: 200%;

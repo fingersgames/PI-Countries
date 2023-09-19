@@ -1,31 +1,48 @@
-import { ADD_COUNTRIES,SEARCH_NAME,ORDER,FILTER } from "./action-types";
+import { ADD_COUNTRIES,ADD_ACTIVITIES,SEARCH_NAME,ORDER, FILTER, FILTER_ACTIVITY, FILTER_CONTINENT } from "./action-types";
 import axios from 'axios'
 
 export const addCountries=()=>{
     const URL_BASE='http://127.0.0.1:5000' 
-    return (distpach)=>{
+    return (dispatch)=>{
         axios.get(`${URL_BASE}/countries/`)
         .then(response=>{
             const data=response.data
-          
-            if (data[0].name) {
-                distpach({
-                    type:ADD_COUNTRIES,
+                if (data[0].name) {
+                    return dispatch({
+                        type:ADD_COUNTRIES,
+                        payload:data
+                    })
+                } else {
+                    return dispatch( {
+                        type:ADD_COUNTRIES,
+                        payload:[]
+                    })
+                }
+        })
+        axios.get(`${URL_BASE}/activities/`)
+        .then(response=>{   
+            const data=response.data
+            if (data[0][0].name) {
+                return dispatch({
+                    type:ADD_ACTIVITIES,
                     payload:data
                 })
             } else {
-                dispatch( {
-                    type:ADD_COUNTRIES,
+                return dispatch({
+                    type:ADD_ACTIVITIES,
                     payload:[]
                 })
             }
         })
+        .catch(()=>{
+            return dispatch({
+                type:ADD_ACTIVITIES,
+                payload:[]
+            })
+        })
+
     }    
 }
-
-
-
-
 export const searchName=(name)=>{
     
     const endpoint='http://127.0.0.1:5000/countries/name?name='+name
@@ -46,9 +63,16 @@ export const searchName=(name)=>{
         })
     }
 }
-export const filterCards=(gender)=>{
-    return{type:FILTER,payload:gender}
+// export const filterContinent=(continent)=>{
+//         return{type:FILTER_CONTINENT,payload:continent}    
+// }
+
+// export const filterActivity=(activity)=>{
+//     return{type:FILTER_ACTIVITY,payload:activity}
+// }
+export const filter=(continent,activity)=>{
+    return{type:FILTER,payload:[continent,activity]}
 }
-export const orderCards=(order)=>{
+export const orderCountries=(order)=>{
     return{type:ORDER,payload:order}
 }

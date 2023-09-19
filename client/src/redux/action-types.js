@@ -1,4 +1,7 @@
 export const ADD_COUNTRIES='ADD_COUNTRIES';
+export const ADD_ACTIVITIES='ADD_ACTIVITIES';
 export const SEARCH_NAME='SEARCH_NAME';
 export const FILTER='FILTER';
+export const FILTER_CONTINENT='FILTER_CONTINENT';
+export const FILTER_ACTIVITY='FILTER_ACTIVITY';
 export const ORDER='ORDER';
